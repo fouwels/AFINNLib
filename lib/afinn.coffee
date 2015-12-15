@@ -15,25 +15,27 @@ class exports.AFHandler
 				dictionary[splits[0]] = splits[1]
 			return callback(null, dictionary)
 
-	getWord: (word) ->
+	getWord: (word) =>
 		result = dictionary[word]
 		if result == undefined
 			result = 0
 		return result;
 
-	getSentence: (string, callback) ->
+	getSentence: (string, callback) =>
+		result = {}
 		runningScore = 0;
 		words = string.split(" ")
-
 		if (words.length < 1)
 			return callback("0 length word sequence provided", null)
 
 		for word in words
-			runningScore += getWord(word)
+			runningScore += Number(this.getWord(word))
+			#normalise somewhat for length
+		norm = words.length / 5
+		if (norm / 1) < 1
+			norm = 1
 
-		runningScore /= () => #normalise somewhat for length
-			norm = words.length / 5
-			if (norm / 1) < 1
-				norm = 1
-
-		return callback(null, runningScore)
+		result["Score"] = runningScore
+		runningScore /= norm
+		result["ScoreNormalised"] = runningScore
+		return callback(null, result)

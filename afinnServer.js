@@ -12,20 +12,29 @@ var middleWare = function (req, res, next) {
 app.use(middleWare);
 
 
-app.get('/:word', function (req, res) {
-  af.getVal(req.params.word, (err, data) => {
-		if(data === null){
-			res.status(404).send("null");
+app.get('/word:word', function (req, res) {
+	var data = af.getWord(req.params.word);
+	if(data === 0){
+		res.status(404).send("0");
+	}
+	else {
+		res.send(data);
+	}
+});
+
+app.get('/sentence', function (req, res) {
+	af.getSentence(req.query.string, (err, data) => {
+		if(err !== null){
+			res.status(500).send("0");
 		}
 		else {
-			res.send(data);
+			res.send(JSON.stringify(data));
 		}
 	});
 });
 
 var af = new AFHandler();
 af.load("./data/AFINN-111.txt", loaded);
-
 
 function loaded(err){
 	if (err !== null) {
