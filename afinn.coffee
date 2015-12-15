@@ -1,6 +1,6 @@
 fs = require 'fs'
 
-class exports.AfinnHandler
+class exports.AFHandler
 	dictionary = {}
 	load: (path, callback) ->
 		if(fs.existsSync(path) == false)
@@ -17,4 +17,7 @@ class exports.AfinnHandler
 				dictionary[splits[0]] = splits[1]
 			callback(null, dictionary)
 	getVal: (word, callback) ->
-		callback(null, dictionary[word])
+		result = dictionary[word]
+		if result == undefined
+			result = null
+		callback(null, result)
