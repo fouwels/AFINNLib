@@ -1,6 +1,6 @@
 {
   "name": "afinn",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Basic provider/parser for the AFINN (or equal format) wordlists; AFINN-111 provided",
   "main": "afinn.coffee",
   "author": "Kaelan Fouwels",
