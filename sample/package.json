@@ -1,8 +1,8 @@
 {
-  "name": "afinn",
+  "name": "node-sample",
   "version": "1.0.0",
   "description": "",
-  "main": "afinnServer.js",
+  "main": "afinnDemo.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "coffee-script": "^1.10.0",
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "path": "^0.12.7"
   }
 }

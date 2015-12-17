@@ -1,10 +1,15 @@
 fs = require 'fs'
+pth = require 'path'
+
 
 class exports.AFHandler
 	dictionary = {}
+
 	load: (path, callback) ->
+		if(path == null)
+			path = pth.resolve(__dirname, "./data/AFINN-111.txt") #ew
 		if(fs.existsSync(path) == false)
-			return callback "File does not exist"
+			return callback "File at [" + path + "] does not exist"
 
 		fs.readFile path, "utf8", (err, data) ->
 			if err != null
