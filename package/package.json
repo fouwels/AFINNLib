@@ -1,7 +1,7 @@
 {
   "name": "afinn",
-  "version": "1.0.0",
-  "description": "Basic provider/parser for the AFINN (or equal format) wordlists; AFINN-111 is provided",
+  "version": "1.0.1",
+  "description": "Basic provider/parser for the AFINN (or equal format) wordlists; AFINN-111 provided",
   "main": "afinn.coffee",
   "author": "Kaelan Fouwels",
   "license": "MIT",
