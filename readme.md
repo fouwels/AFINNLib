@@ -1,11 +1,23 @@
-afinn
+Afinn
 =====
 
-"Basic provider/parser for the AFINN (or equal format) wordlists; AFINN-111 provided"
-see: http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010
+![davidDM](https://david-dm.org/kfwls/afinn.svg)
+![davidDMDev](https://david-dm.org/kfwls/afinn/dev-status.svg)
+
+
+>Basic provider/parser for the AFINN (or of format) wordlists
+
+Provided with [AFINN-111]( http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010)
+
+##Build
 
 ```
 npm install afinn
 ```
 
-See sample/afinnDemo.js for use.
+##Usage
+See ```sample/afinnDemo.js``` for use.
+
+```/word/:word:``` Get value for word
+
+```/sentence?string=``` Get aggregate and normalized score for sentence
