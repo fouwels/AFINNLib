@@ -11,7 +11,7 @@ class exports.AFHandler
 		if(fs.existsSync(path) == false)
 			return callback "File at [" + path + "] does not exist"
 
-		fs.readFile path, "utf8", (err, data) -> 
+		fs.readFile path, "utf8", (err, data) ->
 			if err != null
 				return callback err
 			for item in data.toString().split("\n")
@@ -25,6 +25,7 @@ class exports.AFHandler
 		if result == undefined
 			result = 0
 		return result;
+
 
 	getSentence: (string, callback) =>
 		result = {}

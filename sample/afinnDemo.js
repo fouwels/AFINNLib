@@ -1,4 +1,8 @@
 /*jshint esnext: true */
+"use babel";
+
+var x = () => console.log("yolo");
+
 require('coffee-script/register');
 var AFHandler = require("../package/afinn.coffee").AFHandler;
 var express = require('express'); //yeye, I know, I know

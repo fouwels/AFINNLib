@@ -1,0 +1,3 @@
+[submodule "es6-sample/gulpfile"]
+	path = es6-sample/gulpfile
+	url = http://github.com/kfwls/gulpfile

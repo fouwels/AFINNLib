@@ -1,0 +1,22 @@
+{
+  "name": "es6-sample",
+  "description": "",
+  "main": "afinnDemo.js",
+  "authors": [
+    "Kaelan Fouwels <kae@kfwls.co>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/kfwls/AFINNLib",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.1"
+  }
+}
